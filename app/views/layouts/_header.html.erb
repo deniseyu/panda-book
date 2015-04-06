@@ -1,0 +1,10 @@
+<header>
+<%= link_to 'Home', root_path %>
+<% if panda_signed_in? %>
+  <%= link_to 'Log Out', destroy_panda_session_path, method: :delete, class: 'nav' %>
+<% else %>
+  <%= link_to 'Register', new_panda_registration_path, class: 'nav' %>
+  <%= link_to 'Log In', new_panda_session_path, class: 'nav' %>
+<% end %>
+  <%= link_to 'New', new_post_path %>
+</header>
